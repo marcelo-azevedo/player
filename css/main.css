@@ -237,6 +237,7 @@ body{
     top: 100px;
     left: 2px;
     cursor: pointer;
+    z-index: 9;
 
     width: 85px;
     height: 120px;
@@ -289,7 +290,7 @@ body{
 
     #slide img{
         position: absolute;
-        display: none;
+        /*display: none;*/
         z-index: 1;
         left: 0;
     }
