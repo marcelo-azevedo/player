@@ -38,20 +38,20 @@ footer, header, hgroup, menu, nav, section { display: block; }
 
 .atualizar {
     margin: 0.2em 0;
+    padding: 0.2em 0;
     background: #ccc;
     color: #000;
-    padding: 0.2em 0;
 }
 
 /* Clearfix semântico */
 .group { zoom: 1; }
 .group:after {
-  clear: both;
-  content: " ";
   display: block;
-  font-size: 0;
-  height: 0;
   visibility: hidden;
+  clear: both;
+  height: 0;
+  content: " ";
+  font-size: 0;
 }
 
 /* ==========================================================================
@@ -60,8 +60,8 @@ footer, header, hgroup, menu, nav, section { display: block; }
 
 body{
     background-color: #c1b9ac;
-    font: normal normal 100%/1.5 arial, sans-serif;
     color: #625c53;
+    font: normal normal 100%/1.5 arial, sans-serif;
 }
 
 
@@ -71,14 +71,14 @@ body{
 
 
 .center{
-    width: 920px;
-    margin: 0 auto;
     position: relative;
+    margin: 0 auto;
+    width: 920px;
 }
 
 #the-content{
+    margin-top: .6875em; /*11 % 16*/
     background-color: #fff;
-    margin-top: 11px;
 }
 
 
@@ -87,28 +87,28 @@ body{
    ========================================================================== */
 
 #header{
+    position: relative;
     width: 100%;
     height: 172px;
-    position: relative;
 }
 
 /* ==Logo
 **********************************************/
 #logo {
   position: absolute;
+  top: -.6875em; /*11 % 16*/
   left: 0;
-  top: -11px;
   z-index: 999;
 }
 
     #logo a {
       display: block;
+      overflow: hidden;
       width: 363px;
       height: 214px;
-      overflow: hidden;
+      background: url(../img/logo.png) no-repeat;
       text-indent: 100%;
       white-space: nowrap;
-      background: url(../img/logo.png) no-repeat;
     }
 
 /* ==Formulario
@@ -116,7 +116,7 @@ body{
 
 #login{
     position: absolute;
-    top: 30px;
+    top: 30px; 
     right: 30px;
 }
 
@@ -127,14 +127,14 @@ body{
 
     #login label{
         display: block;
-        margin-bottom: 5px;
+        margin-bottom: .3125em; /*5 % 16*/
     }
 
     #login p{
         float: left;
         width: 40px;
         text-align: right;
-        font-size: 12px;
+        font-size: .75em; /*12 % 16*/
     }
 
     #login input[type=text]{
@@ -154,7 +154,7 @@ body{
         width: 90px;
         height: 20px;
         float: right;
-        font-size: 12px;
+        font-size: .75em; /*12 % 16*/
         color: #685f4f;
         font-weight: bold;
         border: 1px solid #bbb;
@@ -200,7 +200,7 @@ body{
     #menu-topo a{
         float: left;
         font-family: 'HelveticaNeueRegular';
-        font-size: 24px;
+        font-size: 1.5em; /*24 % 16*/
         color: #685f4f;
         font-weight: bold;
         text-transform: uppercase;
@@ -243,7 +243,15 @@ body{
     height: 120px;
     border: none;
     background-color: rgba(0,0,0,0.6);
+
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
 }
+
+    .btn-slide:hover{
+        background-color: rgba(255,255,255,0.6);
+    }
 
     .btn-slide:before{
         content: "";
@@ -263,7 +271,7 @@ body{
     }
 
         .btn-slide:hover:before{
-            opacity: 0.9;
+            border-color:transparent black transparent transparent; 
         }
 
     #next{
@@ -277,6 +285,10 @@ body{
             right: auto;
         }
 
+            #next:hover:before{
+                border-color:transparent transparent transparent black; 
+            }
+
 /* ==slide 
 **********************************************/
 
@@ -287,12 +299,16 @@ body{
     overflow: hidden;
     
 }
+#slide .slider{
+    position:absolute;
+    width:20000px;
+    top:0;
+    left:0;
+}
 
     #slide img{
-        position: absolute;
         /*display: none;*/
-        z-index: 1;
-        left: 0;
+        float:left;
     }
 
 
@@ -338,7 +354,7 @@ body{
 
 #content{
     position: relative;
-    padding: 32px;
+    padding: 2em 32px; /*32 % 16*/
 }
 
 /* ==Aside
@@ -362,17 +378,17 @@ body{
     }
 
     #aside-left h1{
-        padding-top: 14px;
+        padding-top: .4375em; /*14 % 32*/
         height: 60px;
         background-color: #ffa800;
-        font-size: 24px;
+        font-size: 1.5em; /*24 % 16*/
     }
 
     #aside-left a{
-        padding-top: 9px;
+        padding-top: .5625em; /*9 % 16*/
         height: 37px;
         background-color: #685f4f;
-        font-size: 14px;
+        font-size: .875em; /*14 % 16*/
         text-decoration: none;
 
         -webkit-transition: all 0.2s ease-out;
@@ -398,17 +414,17 @@ body{
     }
 
     #article h1{
-        font-size: 24px;
+        font-size: 1.5em; /*24 % 16*/
         color: #ffa800;
         display: block;
-        line-height: 13px;
+        line-height: .541666667; /*13 % 24*/
         margin-bottom: 15px;
     }
 
     #article p{
-        font-size: 12px;
+        font-size: .75em; /*12 % 16*/
         display: block;
-        line-height: 13px;
+        line-height: 1.083333333; /*13 % 12*/
         margin-bottom: 15px;
     }
 
@@ -426,16 +442,16 @@ body{
 
     .footer-article h2{
         color: white;
-        line-height: 13px;
-        font-size: 16px;
+        font-size: 1em; /*16 % 16*/
+        line-height: .8125; /*13 % 16*/
         font-weight: bold;
         margin-bottom: 15px;
     }
 
     .footer-article a{
         color: #625c53;
-        line-height: 13px;
-        font-size: 15px;
+        font-size: .9375em; /*15 % 16*/
+        line-height: .866666667; /*13 % 15*/
         font-weight: bold;
         float: right;
     }
@@ -443,7 +459,7 @@ body{
         .footer-article a:after{
             content: ">>";
             text-decoration: none;
-            font-size: 12px;
+            font-size: .8em; /*12 % 15*/
             margin-left: 3px;
             margin-top: 2px;
             float: right;
@@ -460,7 +476,7 @@ body{
 }
 
     #footer p{
-        font-size: 14px;
+        font-size: .875em; /*14 % 16*/
         padding-right: 15px;
     }
 
